@@ -825,3 +825,11 @@ a:hover {
         grid-template-columns: 1fr;
     }
 }
+.fa-tournament-section {
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.80)),
+                url('../images/hero2.jpeg') center/cover no-repeat !important;
+}
+
+.fa-tournament-section::before {
+    display: none;
+}
