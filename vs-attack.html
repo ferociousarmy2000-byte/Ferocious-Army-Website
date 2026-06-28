@@ -52,123 +52,6 @@
         }
 
         /* ===========================
-           NAVBAR STYLES
-           =========================== */
-        .navbar {
-            background: linear-gradient(135deg, rgba(20, 20, 25, 0.85), rgba(30, 25, 20, 0.88));
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            border-bottom: 1px solid transparent;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-        }
-
-        .navbar::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--accent-primary), var(--neon-red), var(--accent-primary), transparent);
-            box-shadow: 0 0 12px rgba(255, 154, 0, 0.6), 0 0 24px rgba(255, 77, 46, 0.3);
-        }
-
-        .navbar-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 70px;
-        }
-
-        .navbar-logo a {
-            font-size: 1.85rem;
-            font-weight: 700;
-            color: var(--neon-cyan);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-            text-shadow: 0 0 14px rgba(0, 212, 255, 0.5);
-            text-decoration: none;
-        }
-
-        .navbar-logo a:hover {
-            color: var(--accent-primary);
-            text-shadow: 0 0 24px rgba(255, 154, 0, 0.9), 0 0 40px rgba(255, 154, 0, 0.5);
-        }
-
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2.5rem;
-            align-items: center;
-        }
-
-        .nav-link {
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--neon-cyan);
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            position: relative;
-            transition: var(--transition);
-            padding: 0.5rem 0;
-            text-decoration: none;
-        }
-
-        .nav-link:hover {
-            color: var(--accent-primary);
-            text-shadow: 0 0 10px rgba(255, 154, 0, 0.5), 0 0 20px rgba(255, 154, 0, 0.3);
-        }
-
-        .nav-link.active {
-            color: var(--accent-primary);
-            text-shadow: 0 0 15px rgba(255, 154, 0, 0.9), 0 0 30px rgba(255, 77, 46, 0.6);
-        }
-
-        .nav-link.active::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--accent-primary), var(--neon-red), transparent);
-            box-shadow: 0 0 8px rgba(255, 154, 0, 0.6);
-            border-radius: 2px;
-        }
-
-        .nav-cta {
-            font-size: 0.95rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            color: #000000;
-            background: linear-gradient(135deg, var(--neon-cyan) 0%, #0088ff 100%);
-            padding: 0.5rem 1.25rem;
-            border-radius: 6px;
-            text-decoration: none;
-            transition: var(--transition);
-            box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
-            border: 1px solid rgba(0, 212, 255, 0.5);
-        }
-
-        .nav-cta:hover {
-            background: linear-gradient(135deg, var(--accent-primary) 0%, var(--neon-red) 100%);
-            border-color: rgba(255, 154, 0, 0.5);
-            transform: translateY(-2px);
-            box-shadow: 0 0 25px rgba(255, 154, 0, 0.7), 0 0 40px rgba(255, 77, 46, 0.3);
-            filter: brightness(1.15);
-        }
-
-        /* ===========================
            HERO SECTION
            =========================== */
         .hero {
@@ -516,39 +399,9 @@
         }
 
         /* ===========================
-           FOOTER
-           =========================== */
-        footer {
-            background: linear-gradient(135deg, rgba(20, 20, 25, 0.9), rgba(30, 25, 20, 0.9));
-            border-top: 1px solid var(--border-color);
-            padding: 40px 20px;
-            margin-top: 60px;
-        }
-
-        .footer-content {
-            max-width: 1100px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .footer-text {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            margin-bottom: 15px;
-        }
-
-        /* ===========================
            RESPONSIVE
            =========================== */
         @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-            }
-
-            .nav-cta {
-                display: none;
-            }
-
             .hero-title {
                 font-size: 2.5rem;
             }
@@ -582,20 +435,22 @@
     <nav class="navbar">
         <div class="navbar-container">
             <div class="navbar-logo">
-                <a href="index.html" id="nav-home">Ferocious Army</a>
+                <a href="index.html">Ferocious Army</a>
             </div>
             <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">
                 &#9776;
             </button>
             <ul class="nav-menu" id="primary-navigation">
-                <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
-                <li><a href="#strategies" class="nav-link" id="nav-strategies">Strategies</a></li>
-                <li><a href="#leaks" class="nav-link" id="nav-leaks">Leaks</a></li>
-                <li><a href="#reviews" class="nav-link" id="nav-reviews">Reviews</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#strategies" class="nav-link" id="nav-strategies">Strategies</a></li>
+                <li><a href="index.html#showcase" class="nav-link" id="nav-leaks">Leaks</a></li>
+                <li><a href="index.html#reviews" class="nav-link" id="nav-reviews">Reviews</a></li>
             </ul>
-            <a href="#" class="nav-cta">Join Discord</a>
+            <a href="index.html#discord" class="nav-cta">Join</a>
         </div>
     </nav>
+
+    <script src="navbar.js"></script>
 
     <!-- ===========================
          HERO SECTION
@@ -863,15 +718,15 @@
                 <div class="footer-section">
                     <ul class="list-none space-y-2 mt-4 p-0 flex flex-col items-end">
                         <p class="font-bold mb-4 text-sm uppercase tracking-wider">Quick Links</p>
-                        <li><a href="#showcase" class="footer-links">Leaks</a></li>
-                        <li><a href="#reviews" class="footer-links">Reviews</a></li>
-                        <li><a href="#strategies" class="footer-links">Strategies</a></li>
+                        <li><a href="index.html#showcase" class="footer-links">Leaks</a></li>
+                        <li><a href="index.html#reviews" class="footer-links">Reviews</a></li>
+                        <li><a href="index.html#strategies" class="footer-links">Strategies</a></li>
                     </ul>
                 </div>
                 <!-- Contact info - discord -->
                 <div class="footer-contact">
                     <p class="font-bold text-sm uppercase tracking-wider">Join us at</p>
-                    <a href="https://discord.gg/tEbCPmEH" class="footer-links">Discord</a>
+                    <a href="https://discord.gg/Hu6R6sjRwR" class="footer-links">Discord</a>
                 </div>
 
                 <!-- Contact info - yt -->
@@ -886,7 +741,6 @@
             </div>
         </div>
     </footer>
-
 
     <!-- Navigation Script -->
     <script>
