@@ -186,38 +186,6 @@
             margin-bottom: 15px;
         }
 
-        footer {
-            border-top: 1px solid var(--border-color);
-            padding: 40px 20px;
-            margin-top: 60px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* VS Attack-style footer: background image + overlay */
-        footer::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: url('images/h2h.jpeg');
-            background-size: cover;
-            background-position: center;
-            filter: saturate(120%) brightness(0.75);
-            transform: scale(1.02);
-        }
-
-        footer::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.6);
-        }
-
-        footer > * {
-            position: relative;
-            z-index: 1;
-        }
-
         /* FORMATION CARDS */
         .formation-grid {
             display: grid;
@@ -462,20 +430,22 @@
     <nav class="navbar">
         <div class="navbar-container">
             <div class="navbar-logo">
-                <a href="index.html" id="nav-home">Ferocious Army</a>
+                <a href="index.html">Ferocious Army</a>
             </div>
             <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">
                 &#9776;
             </button>
             <ul class="nav-menu" id="primary-navigation">
-                <li><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
-                <li><a href="#" class="nav-link" id="nav-strategies">Strategies</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#strategies" class="nav-link" id="nav-strategies">Strategies</a></li>
                 <li><a href="index.html#showcase" class="nav-link" id="nav-leaks">Leaks</a></li>
                 <li><a href="index.html#reviews" class="nav-link" id="nav-reviews">Reviews</a></li>
             </ul>
-            <a href="#" class="nav-cta">Join Discord</a>
+            <a href="index.html#discord" class="nav-cta">Join</a>
         </div>
     </nav>
+
+    <script src="navbar.js"></script>
 
     <section class="hero">
         <div class="hero-content">
@@ -731,15 +701,15 @@
                 <div class="footer-section">
                     <ul class="list-none space-y-2 mt-4 p-0 flex flex-col items-end">
                         <p class="font-bold mb-4 text-sm uppercase tracking-wider">Quick Links</p>
-                        <li><a href="#showcase" class="footer-links">Leaks</a></li>
-                        <li><a href="#reviews" class="footer-links">Reviews</a></li>
-                        <li><a href="#strategies" class="footer-links">Strategies</a></li>
+                        <li><a href="index.html#showcase" class="footer-links">Leaks</a></li>
+                        <li><a href="index.html#reviews" class="footer-links">Reviews</a></li>
+                        <li><a href="index.html#strategies" class="footer-links">Strategies</a></li>
                     </ul>
                 </div>
                 <!-- Contact info - discord -->
                 <div class="footer-contact">
                     <p class="font-bold text-sm uppercase tracking-wider">Join us at</p>
-                    <a href="https://discord.gg/tEbCPmEH" class="footer-links">Discord</a>
+                    <a href="https://discord.gg/Hu6R6sjRwR" class="footer-links">Discord</a>
                 </div>
 
                 <!-- Contact info - yt -->
@@ -754,5 +724,15 @@
             </div>
         </div>
     </footer>
+
+    <!-- Navigation Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navStratLink = document.getElementById('nav-strategies');
+            if (navStratLink) {
+                navStratLink.classList.add('active');
+            }
+        });
+    </script>
 </body>
 </html>
