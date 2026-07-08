@@ -1,0 +1,21 @@
+{
+  "name": "ferocious-army-website",
+  "version": "1.0.0",
+  "description": "Ferocious Army - FC Mobile Community Website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'No build step required for static site'",
+    "lint": "echo 'No linting configured'"
+  },
+  "keywords": [
+    "fc-mobile",
+    "community",
+    "gaming"
+  ],
+  "author": "Ferocious Army",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/analytics": "^1.4.1"
+  }
+}
