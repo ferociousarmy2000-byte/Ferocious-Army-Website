@@ -13,10 +13,10 @@ const LEAKS_FOLDER = 'Leaks/';
 // leaks.js will always show the latest 4 based on filename date parsing.
 const leakImages = [
     // Newest 4 (added to Leaks folder)
+    { filename: 'HMZbqF-awAAoBQq.jpg', date: '2026-06-17' },
+    { filename: 'HMZbrJZaoAAJu1D.jpg', date: '2026-06-16' },
     { filename: 'Screenshot_2026-06-17-19-52-39-24_0b2fce7a16bf2b728d6ffa28c8d60efb.jpg', date: '2026-06-17' },
     { filename: 'Screenshot_20260616-202047.png', date: '2026-06-16' },
-    { filename: 'IMG_1933.png', date: '2026-06-16' },
-    { filename: 'image.jpg', date: '2026-06-16' },
 
     // Older leaks
     { filename: 'Screenshot_2026-04-30-11-36-34-60_40deb401b9ffe8e1df2f1cc5ba480b12.png', date: '2026-04-30' },
@@ -27,10 +27,10 @@ const leakImages = [
 
 // Force ordering for the first 4 slots (some filenames don't match parse patterns)
 const LEAKS_MANUAL_ORDER_TOP4 = [
+    'HMZbqF-awAAoBQq.jpg',
+    'HMZbrJZaoAAJu1D.jpg',
     'Screenshot_2026-06-17-19-52-39-24_0b2fce7a16bf2b728d6ffa28c8d60efb.jpg',
-    'Screenshot_20260616-202047.png',
-    'IMG_1933.png',
-    'image.jpg'
+    'Screenshot_20260616-202047.png'
 ];
 
 
